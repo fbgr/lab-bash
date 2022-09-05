@@ -1,0 +1,121 @@
+➜  ~ cd IH-Labs
+➜  IH-Labs ls
+➜  IH-Labs ls
+➜  IH-Labs git clone https://github.com/fbgr/lab-bash
+Cloning into 'lab-bash'...
+remote: Enumerating objects: 40, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 40 (delta 14), reused 10 (delta 10), pack-reused 17
+Receiving objects: 100% (40/40), 11.61 KiB | 849.00 KiB/s, done.
+Resolving deltas: 100% (14/14), done.
+➜  IH-Labs cd lab-bash
+➜  lab-bash git:(master) ✗ echo "Hello World"
+Hello World
+➜  lab-bash git:(master) ✗ mk new_dir
+zsh: command not found: mk
+➜  lab-bash git:(master) ✗ mkdir new_dir
+➜  lab-bash git:(master) ✗ rmdir new_dir
+➜  lab-bash git:(master) ✗ cp lorem/sed.txt lorem-copy
+➜  lab-bash git:(master) ✗ ls lorem
+at.txt    at.txte   lorem.txt sed.txt
+➜  lab-bash git:(master) ✗ cp lorem/lorem.txt lorem-copy; cp lorem/at.txt lorem-copy
+➜  lab-bash git:(master) ✗ cat lorem/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+➜  lab-bash git:(master) ✗ cat lorem/at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+➜  lab-bash git:(master) ✗ cat lorem/lorem.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+➜  lab-bash git:(master) ✗ head -3 lorem/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+➜  lab-bash git:(master) ✗ tail -3 lorem-copy/sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+➜  lab-bash git:(master) ✗ echo "Homo homini lupus." >> lorem-copy/sed.txt
+➜  lab-bash git:(master) ✗ tail -3 lorem-copy/sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+➜  lab-bash git:(master) ✗ sed -i'' -e 's/et/ET/g' lorem/sed.txt
+➜  lab-bash git:(master) ✗ cat lorem/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ET quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amET, consectETur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore ET dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+➜  lab-bash git:(master) ✗ whoami
+fer
+➜  lab-bash git:(master) ✗ pwd
+/Users/fernando/IH-Labs/lab-bash
+➜  lab-bash git:(master) ✗ cd lorem
+➜  lorem git:(master) ✗ ls *.txt
+at.txt    lorem.txt sed.txt
+➜  lorem git:(master) ✗ cat sed.txt | wc -l
+       9
+➜  lorem git:(master) ✗ cd ..
+➜  lab-bash git:(master) ✗ find . -name 'lorem*'
+./lorem-copy
+./lorem-copy/lorem.txt
+./lorem
+./lorem/lorem.txt
+➜  lab-bash git:(master) ✗ find . -name 'lorem*' -type f
+./lorem-copy/lorem.txt
+./lorem/lorem.txt
+➜  lab-bash git:(master) ✗ find . -name 'lorem*' -type f | wc -l
+       2
+➜  lab-bash git:(master) ✗ read name
+Fernando
+➜  lab-bash git:(master) ✗ echo $name
+Fernando
+➜  lab-bash git:(master) ✗ mkdir $name
+➜  lab-bash git:(master) ✗ rmdir Fernando
+➜  lab-bash git:(master) ✗ git add .
+➜  lab-bash git:(master) ✗ git commit -m 'bash answers'
+[master cf6302a] bash answers
+ 10 files changed, 36 insertions(+), 3 deletions(-)
+ mode change 100755 => 100644 exercices/.gitkeep
+ mode change 100755 => 100644 inputs/.gitkeep
+ mode change 100755 => 100644 lorem-copy/.gitkeep
+ create mode 100755 lorem-copy/at.txt
+ create mode 100755 lorem-copy/lorem.txt
+ create mode 100755 lorem-copy/sed.txt
+ create mode 100755 lorem/sed.txt-e
+ mode change 100755 => 100644 outputs/.gitkeep
+➜  lab-bash git:(master) git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1.88 KiB | 1.88 MiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/fbgr/lab-bash
+   689f07d..cf6302a  master -> master
+➜  lab-bash git:(master)
